@@ -104,6 +104,9 @@
   }
 
   function clearMenus() {
+    if (this)
+        $(toggle).parent(".open").trigger("dropdown-hide");
+
     $(toggle).each(function () {
       getParent($(this)).removeClass('open')
     })
